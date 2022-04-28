@@ -1,0 +1,92 @@
+$font-stack: 'Quicksand', sans-serif;
+$primary-color: black;
+$bg-color: #e9e0d7;
+$color-purple: #E2AFDE;
+$color-pink: #F991CC;
+$color-title: #b66fa1;
+
+html{
+  font-family: $font-stack;
+  padding: 0cm;
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0p;
+}
+
+nav {
+  background-image: linear-gradient(to left, $color-purple, $color-pink);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+
+  img {
+  width: 40px;
+  }
+
+  ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  }
+  li {
+    margin-right: 5px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+}
+
+footer{
+  background-image: linear-gradient(to left, $color-pink, $color-purple);
+  font-size: medium; 
+  text-align:center; 
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+  .links {
+  color: $primary-color;
+  }
+    &:hover, a.links:active {
+    font-size: 110%;
+    }
+}
+
+article {
+  background-color: $bg-color;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 2px solid $color-title;
+
+  h2 {
+    color:$color-title; 
+    text-align: left; 
+    font-size: xx-large;
+  }
+  
+ 
+  
+}
+
+$estilos: (
+  color: #b45096,
+  centro: center
+);
+
+h3 {
+    background-color: map-get($estilos, color);
+    text-align: map-get($estilos, centro);
+    padding: 1rem;
+    color: white;
+}
+
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+.quote {
+  @include bordered(#b45096, 2px);  
+}
+
+.donatella {
+  @include bordered(#E2AFDE, 1px); 
+}
